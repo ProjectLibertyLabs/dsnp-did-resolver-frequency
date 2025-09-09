@@ -1,6 +1,6 @@
 # Overview
 
-This package contains a resolver for the [@dsnp/did-resolver](https://github.com/LibertyDSNP/dsnp-did-resolver) library which enables resolution of `did:dsnp:*` DIDs on the [Frequency](https://github.com/LibertyDSNP/frequency) blockchain.
+This package contains a resolver for the [@dsnp/did-resolver](https://github.com/LibertyDSNP/dsnp-did-resolver) library which enables resolution of `did:dsnp:*` DIDs on the [Frequency](https://github.com/frequency-chain/frequency) blockchain.
 
 # Installation
 
