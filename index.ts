@@ -114,7 +114,7 @@ export class FrequencyResolver implements DSNPResolver {
         "1.2",
         api.genesisHash.toString(),
       );
-    } catch (e) {
+    } catch (_error) {
       this.keyAgreementSchemaId = null;
     }
 
@@ -124,7 +124,7 @@ export class FrequencyResolver implements DSNPResolver {
         "1.3",
         api.genesisHash.toString(),
       );
-    } catch (e) {
+    } catch (_error) {
       this.assertionMethodSchemaId = null;
     }
     this.initialized = true;
@@ -173,7 +173,7 @@ export class FrequencyResolver implements DSNPResolver {
     let handle;
     // bytes are: scale-encoded length + handle.xx + u32 blocknum
     if (handleResult) {
-      let hexStr = handleResult.toString();
+      const hexStr = handleResult.toString();
       handle = hexToString("0x" + hexStr.substring(4, hexStr.length - 8));
     }
     const alsoKnownAs = handle ? ["did:frqcy:handle:" + handle] : [];
