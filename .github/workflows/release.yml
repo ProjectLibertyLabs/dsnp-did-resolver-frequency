@@ -26,7 +26,7 @@ jobs:
         run: npm version --new-version ${{ github.event.release.tag_name }} --no-git-tag-version
         working-directory: dist
 
-     - name: NPM Access Config
+      - name: NPM Access Config
         run: npm config set //registry.npmjs.org/:_authToken ${{secrets.NPM_AUTH_TOKEN}}
 
       - name: Publish 🚂
