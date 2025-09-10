@@ -1,7 +1,7 @@
-import { expect, jest, test } from "@jest/globals";
+//import { expect, jest, test } from "@jest/globals";
 import { FrequencyResolver } from "./index.js";
-import { ApiPromise, WsProvider } from "@polkadot/api";
-import { options } from "@frequency-chain/api-augment";
+//import { ApiPromise, WsProvider } from "@polkadot/api";
+//import { options } from "@frequency-chain/api-augment";
 
 describe("dsnp-did-resolver-frequency", () => {
   it("can be constructed with providerUri", async () => {
