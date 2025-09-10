@@ -2,6 +2,11 @@ name: Release Package
 on:
   release:
     types: [ released ]
+
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   publish-to-npm:
     runs-on: ubuntu-22.04
@@ -26,9 +31,6 @@ jobs:
         run: npm version --new-version ${{ github.event.release.tag_name }} --no-git-tag-version
         working-directory: dist
 
-      - name: NPM Access Config
-        run: npm config set //registry.npmjs.org/:_authToken ${{secrets.NPM_AUTH_TOKEN}}
-
       - name: Publish 🚂
-        run: npm publish --tag latest --access public
+        run: npm publish
         working-directory: dist
